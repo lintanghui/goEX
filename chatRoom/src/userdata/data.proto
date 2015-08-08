@@ -1,0 +1,22 @@
+syntax ="proto3";
+
+
+package userdata;
+
+message Chat{
+    message Request{
+        int64 timestamp = 1; // 当前客户端时间戳
+        string name =2;  // 登录用户名
+        string mode =  3; // 聊天模式
+        string object = 4; // 聊天对象
+        string content = 5; // 聊天内容
+        string passwd =6; // 用户密码
+    }
+
+    message Response {
+        int64 timestamp = 1; // 来源请求客户端时间戳
+        string object = 2;  // 来源用户名
+        string content =  3; // 聊天内容
+        string mode =4; // 聊天模式
+    }
+}
